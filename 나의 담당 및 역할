@@ -1,0 +1,14 @@
+BE2 (AI 연동 및 데이터 처리)
+
+담당
+1) 이미지 업로드 API
+2) Firebase Storage
+3) AI 서버 연동
+4) 마감재 DB
+5) 추천 기능 데이터 처리
+6) 사용자 선호도 분석
+
+DB
+1. MATERIALS
+2. USER_PREFERENCES
+3. MATERIAL_HISTORY
