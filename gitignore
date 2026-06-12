@@ -1,0 +1,29 @@
+Plaintext
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+
+# IDE계열 설정 파일
+.blueprint/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# 환경 설정 및 보안 키 (가장 중요)
+application-dev.yml
+application-prod.yml
+*.json
+*.pem
+/security/
+
+# OS 파일
+.DS_Store
+Thumbs.db
