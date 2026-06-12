@@ -1,0 +1,38 @@
+BE2 (AI 연동 및 데이터 처리)
+
+담당
+1) 이미지 업로드 API
+2) Firebase Storage
+3) AI 서버 연동
+4) 마감재 DB
+5) 추천 기능 데이터 처리
+6) 사용자 선호도 분석
+
+DB
+1. MATERIALS
+2. USER_PREFERENCES
+3. MATERIAL_HISTORY
+
+BE2의 최종 산출물(BE2 역할: 이미지 / AI / Storage / 마감재 / 추천 처리 담당)
+- 이미지 업로드 API
+- Firebase Storage 저장 로직
+- AI 서버 연동 로직
+- AI 분석 결과 반환 API
+- 최종 시안 생성 요청 API
+- 결과 이미지 Storage 저장
+- MATERIALS 데이터 모델
+- USER_PREFERENCES 데이터 모델
+- MATERIAL_HISTORY 데이터 모델
+- 추천 데이터 처리 API
+
+BE1과 BE2가 같이 정해야 하는 부분
+- 하나의 FastAPI 서버로 할지, BE1/BE2 서버를 분리할지
+- Firebase Auth 토큰 검증 로직을 공통으로 쓸지
+- project_id 생성 시점
+- 이미지 업로드 후 original_image_url을 PROJECTS에 저장할지
+- analysis_id를 PROJECTS에 저장할지, 별도 컬렉션으로 둘지
+- 최종 시안 생성 후 SCENARIOS 저장을 누가 호출할지
+- material_id 형식
+- image_url 필드 이름
+- API 요청/응답 JSON 형식
+- 삭제 시 DB 데이터와 Storage 이미지 삭제 책임 분리
