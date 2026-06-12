@@ -1,0 +1,20 @@
+Plaintext
+backend-be2/
+├── .github/
+│   └── workflows/          # CI/CD 자동화 (선택 사항)
+├── src/
+│   ├── main/
+│   │   ├── java/com/service/be2/ # (Spring Boot 기준, 타 언어 환경이면 해당 언어 구조 적용)
+│   │   │   ├── config/     # Firebase, AI 서버 통신, WebMvc 등 설정 클래스
+│   │   │   ├── controller/ # 이미지, 마감재, 추천 API 컨트롤러
+│   │   │   ├── dto/        # Request/Response 데이터 전송 객체
+│   │   │   ├── model/      # MATERIALS, USER_PREFERENCES 등 Entity 정의
+│   │   │   ├── repository/ # DB 접근 인터페이스
+│   │   │   └── service/    # 이미지 처리, AI 연동, 추천 로직 비즈니스 레이어
+│   │   └── resources/
+│   │       ├── application.yml       # 공통 환경 설정
+│   │       └── application-dev.yml   # 개발용 로컬 환경 설정 (DB, AI URL 등)
+├── .gitignore
+├── README.md
+└── security/ 
+    └── firebase-service-account.json
