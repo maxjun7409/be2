@@ -1,0 +1,18 @@
+BE2 (AI 연동 및 데이터 처리)
+
+DB
+- MATERIALS
+- USER_PREFERENCES
+- MATERIAL_HISTORY
+
+BE2의 최종 산출물(BE2 역할: 이미지 / AI / Storage / 마감재 / 추천 처리 담당)
+- 이미지 업로드 API
+- Firebase Storage 저장 로직
+- AI 서버 연동 로직
+- AI 분석 결과 반환 API
+- 최종 시안 생성 요청 API
+- 결과 이미지 Storage 저장
+- MATERIALS 데이터 모델
+- USER_PREFERENCES 데이터 모델
+- MATERIAL_HISTORY 데이터 모델
+- 추천 데이터 처리 API
