@@ -1,0 +1,27 @@
+backend/
+├── app/
+│   ├── main.py                  # 앱 생성, 라우터 등록, 예외 핸들러 등록   [BE1]
+│   ├── core/
+│   │   ├── config.py            # 환경변수 (pydantic-settings)          [BE1]
+│   │   ├── firebase.py          # firebase_admin 초기화, db/bucket 제공   [BE1]
+│   │   ├── auth.py              # 토큰 검증 의존성                        [BE1]
+│   │   ├── permissions.py       # 소유권·권한 검사 의존성                  [BE1]
+│   │   ├── errors.py            # AppError, 에러 코드, 예외 핸들러          [BE1]
+│   │   └── ids.py               # p_/s_/a_ 접두사 + ULID 발급             [BE1]
+│   ├── schemas/                 # Pydantic 요청/응답 모델
+│   │   ├── common.py  user.py  project.py  scenario.py                  [BE1]
+│   │   └── analysis.py  material.py  generation.py  preference.py       [BE2]
+│   ├── repositories/            # Firestore 읽기/쓰기만 담당
+│   │   ├── users.py  projects.py  scenarios.py                          [BE1]
+│   │   └── analyses.py  materials.py  history.py  preferences.py        [BE2]
+│   ├── services/                # 여러 저장소를 묶는 비즈니스 로직
+│   │   ├── scenario_service.py  account_service.py                      [BE1]
+│   │   └── storage.py  ai_client.py  recommend.py                       [BE2]
+│   ├── routers/
+│   │   ├── users.py  projects.py  scenarios.py                          [BE1]
+│   │   └── analyses.py  materials.py  generations.py  uploads.py        [BE2]
+│   └── jobs/cleanup.py          # 만료 초안 정리                          [BE2]
+├── scripts/seed_materials.py                                            [BE2]
+├── tests/
+├── .env.example
+└── requirements.txt
